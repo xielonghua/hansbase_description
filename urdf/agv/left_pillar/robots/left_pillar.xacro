@@ -1,0 +1,51 @@
+<robot
+  name="left_pillar" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="base_left_P" type="fixed">
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="left_pillar" />
+  </joint>
+
+  <link
+    name="left_pillar">
+    <inertial>
+      <origin
+        xyz="-0.399993986422026 -0.0326132787405447 -0.0970060138763574"
+        rpy="0 0 0" />
+      <mass
+        value="0.00806252025685313" />
+      <inertia
+        ixx="7.41513869982317E-06"
+        ixy="9.50933032256144E-10"
+        ixz="2.91580354991122E-13"
+        iyy="3.35334154199802E-07"
+        iyz="-9.50988339942426E-10"
+        izz="7.4151386998521E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/left_pillar/meshes/left_pillar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/left_pillar/meshes/left_pillar.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

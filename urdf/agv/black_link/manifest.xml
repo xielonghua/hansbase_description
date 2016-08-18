@@ -1,0 +1,6 @@
+<package>
+  <description brief="black_link">black_link</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

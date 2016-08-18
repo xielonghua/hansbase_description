@@ -1,0 +1,54 @@
+<robot
+  name="slam_car">
+
+  <link name="world"/>
+
+  <joint name="world_car" type="fixed">
+    <parent link="world"/>
+    <child link="slam_car"/>
+      <origin
+        xyz="0 0 0.327"
+        rpy="-1.57 0 0" />
+  </joint>
+
+  <link
+    name="slam_car">
+    <inertial>
+      <origin
+        xyz="0.0072919 -0.2064 -0.00673959999999999"
+        rpy="0 0 0" />
+      <mass
+        value="109.27" />
+      <inertia
+        ixx="4.05879382215704"
+        ixy="0.000153671844146341"
+        ixz="-0.0446027277933454"
+        iyy="-0.000163151810587677"
+        iyz="-10.6020596461313"
+        izz="0.000163151810588785" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="1.5707963267949 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/slam_car/meshes/slam_car.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/slam_car/meshes/slam_car.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,50 @@
+<robot
+  name="orange_link" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="base_orange" type="fixed">
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="orange_link" />
+  </joint>
+  <link
+    name="orange_link">
+    <inertial>
+      <origin
+        xyz="-3.87210637767618E-16 0.086 0.3195"
+        rpy="0 0 0" />
+      <mass
+        value="0.00415707963267949" />
+      <inertia
+        ixx="1.74014177178303E-06"
+        ixy="-9.69156998527403E-21"
+        ixz="8.25799542534932E-21"
+        iyy="6.65665628574448E-06"
+        iyz="-2.27473191008825E-21"
+        izz="8.39610521092207E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/orange_link/meshes/orange_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="${255/255} ${108/255} ${10/255} 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/orange_link/meshes/orange_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

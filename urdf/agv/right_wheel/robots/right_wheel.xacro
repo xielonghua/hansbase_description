@@ -1,0 +1,52 @@
+<robot
+  name="right_wheel" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="wheel_right_joint" type="continuous">
+      <origin xyz="0 0.2495 -0.2945"
+              rpy="0 0 0"/>
+      <axis xyz="0 0 1"/>
+      <parent link="base_link"/>
+      <child link="wheel_right" />
+  </joint>
+
+  <link
+    name="wheel_right">
+    <inertial>
+      <origin
+        xyz="7.94203775627991E-06 ${0.24951709372592-0.2495} ${0.288056803732584+0.2945}"
+        rpy="0 0 0" />
+      <mass
+        value="0.443396701886305" />
+      <inertia
+        ixx="0.000711221648918036"
+        ixy="-5.67486914936472E-08"
+        ixz="-1.2704517821774E-07"
+        iyy="0.000711318140470396"
+        iyz="-2.73440585715834E-07"
+        izz="0.00115225918118374" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.2495 0.2945"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/right_wheel/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="${255/255} ${108/255} ${10/255} 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 -0.2495 0.2945"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/right_wheel/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

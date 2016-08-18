@@ -1,0 +1,51 @@
+<robot
+  name="car_body" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="base_body" type="fixed">
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="body_link" />
+  </joint>
+
+  <link
+    name="body_link">
+    <inertial>
+      <origin
+        xyz="-0.0175967959443828 -0.00312346665183396 -0.147414558371594"
+        rpy="0 0 0" />
+      <mass
+        value="7.23548918843179" />
+      <inertia
+        ixx="0.405400863492592"
+        ixy="0.0141357053893733"
+        ixz="-0.0097812979073314"
+        iyy="0.86950917809081"
+        iyz="0.000239086798449981"
+        izz="1.20031591163452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ct_description/urdf/car_body/meshes/body_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ct_description/urdf/car_body/meshes/body_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

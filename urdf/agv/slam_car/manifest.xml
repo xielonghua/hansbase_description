@@ -1,0 +1,6 @@
+<package>
+  <description brief="R1607 slam无轨导航小车">R1607 slam无轨导航小车</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

@@ -1,0 +1,6 @@
+<package>
+  <description brief="car_body">car_body</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

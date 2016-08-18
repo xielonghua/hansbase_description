@@ -1,0 +1,64 @@
+<robot
+  name="car_base" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/car_body/robots/car_body.xacro" />
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/kinect_base/robots/kinect_base.xacro" />
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/kinect_body/robots/kinect_body.xacro" />
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/left_pillar/robots/left_pillar.xacro" />
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/right_pillar/robots/right_pillar.xacro" />
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/right_wheel/robots/right_wheel.xacro" />
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/left_wheel/robots/left_wheel.xacro" />
+
+ <xacro:include filename="$(find hansbase_description)/urdf/agv/blue_link/robots/blue_link.xacro" />
+
+ <link name="world"/>
+
+  <joint name="world_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+      <origin
+        xyz="0 0 0.327"
+        rpy="-1.57 0 0" />
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00841524765021477 -0.00315151713656052 -0.142821517333806"
+        rpy="0 0 0" />
+      <mass
+        value="10.4649686087084" />
+      <inertia
+        ixx="0.532167254454805"
+        ixy="0.00138678194565612"
+        ixz="-0.00300970036360727"
+        iyy="0.875418828096318"
+        iyz="-0.00209057289052577"
+        izz="1.24592193831132" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/car_base/meshes/base_link.STL"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="${255/255} ${108/255} ${10/255} 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/car_base/meshes/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<package>
+  <name>hansbase_description</name>
+  <version>0.0.0</version>
+  <description>The hansbase_description package</description>
+  <maintainer email="admin@xielonghua.cn">xielonghua</maintainer>
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

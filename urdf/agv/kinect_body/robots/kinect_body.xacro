@@ -1,0 +1,51 @@
+<robot
+  name="kinect_body" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="base_kbody" type="fixed">
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="kinect_body" />
+  </joint>
+
+  <link
+    name="kinect_body">
+    <inertial>
+      <origin
+        xyz="-0.387735955932466 -0.115960793762788 -0.000110353941278938"
+        rpy="0 0 0" />
+      <mass
+        value="0.576483561432384" />
+      <inertia
+        ixx="0.00307978557153168"
+        ixy="6.12921549674291E-08"
+        ixz="1.6947026091336E-06"
+        iyy="0.00318938860298847"
+        iyz="2.49624002767888E-09"
+        izz="0.000247199065167597" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/kinect_body/meshes/kinect_body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/kinect_body/meshes/kinect_body.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

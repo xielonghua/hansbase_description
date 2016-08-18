@@ -1,0 +1,51 @@
+<robot
+  name="black_link" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="base_black" type="fixed">
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="black_link" />
+  </joint>
+
+  <link
+    name="black_link">
+    <inertial>
+      <origin
+        xyz="-0.286271772619858 -0.103861415419784 -3.96438265967463E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.105609804188014" />
+      <inertia
+        ixx="4.02339855844134E-05"
+        ixy="-1.13118968530794E-13"
+        ixz="3.13507420729957E-10"
+        iyy="8.83833697475628E-05"
+        iyz="2.98293665434678E-13"
+        izz="5.58228374623574E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/black_link/meshes/black_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/black_link/meshes/black_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

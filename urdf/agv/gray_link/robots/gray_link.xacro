@@ -1,0 +1,51 @@
+<robot
+  name="gray_link" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="base_gray" type="fixed">
+      <origin xyz="0 0 0"
+              rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="gray_link" />
+  </joint>
+
+  <link
+    name="gray_link">
+    <inertial>
+      <origin
+        xyz="-0.000206786367957429 -0.000415865339092322 -0.116068739147828"
+        rpy="0 0 0" />
+      <mass
+        value="19.1007242132882" />
+      <inertia
+        ixx="0.506859206461725"
+        ixy="0.0012468788580626"
+        ixz="-0.000191406020227498"
+        iyy="2.44745208081158"
+        iyz="-0.000369154652862652"
+        izz="2.84927015179689" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/gray_link/meshes/gray_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hansbase_description/urdf/agv/gray_link/meshes/gray_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

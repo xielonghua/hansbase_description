@@ -1,0 +1,6 @@
+<package>
+  <description brief="right_pillar">right_pillar</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>
